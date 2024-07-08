@@ -87,5 +87,3 @@ public string ShippingAddress
         }
     }
 }
-	}
-}
