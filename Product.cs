@@ -13,7 +13,7 @@ namespace Zadanie_8
 
 		public Product(string productID, string name, string category, decimal price, int stockQuantity, string description, bool isAvaileble)
 		{
-			
+			this.productID = productID;
 		}
 	}
 }
