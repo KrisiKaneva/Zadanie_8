@@ -1,117 +1,117 @@
-﻿using System;
+using System;
 namespace Zadanie_8
 {
 	public class Product
 	{
 		private string productID;
-public string ProductID
-{
-    get { return productID; }
-    set
-    {
-        if (value == " ")
+        public string ProductID
         {
-            throw new NullReferenceException();
+            get { return productID; }
+            set
+            {
+                if (value == " ")
+                {
+                    throw new NullReferenceException();
+                }
+                else
+                {
+                    productID = value;
+                }
+            }
         }
-        else
-        {
-            productID = value;
-        }
-    }
-}
 
-private string name;
-public string Name
-{
-    get { return name; }
-    set
-    {
-        if (value == " ")
+        private string name;
+        public string Name
         {
-            throw new NullReferenceException();
+            get { return name; }
+            set
+            {
+                if (value == " ")
+                {
+                    throw new NullReferenceException();
+                }
+                else
+                {
+                    name = value;
+                }
+            }
         }
-        else
-        {
-            name = value;
-        }
-    }
-}
 
-private string category;
-public string Category
-{
-    get { return category; }
-    set
-    {
-        if (value == " ")
+        private string category;
+        public string Category
         {
-            throw new NullReferenceException();
+            get { return category; }
+            set
+            {
+                if (value == " ")
+                {
+                    throw new NullReferenceException();
+                }
+                else
+                {
+                    category = value;
+                }
+            }
         }
-        else
+        private decimal price;
+        public string Price
         {
-            category = value;
+            get { return price; }
+            set
+            {
+                if (value == " ")
+                {
+                    throw new NullReferenceException();
+                }
+                else
+                {
+                    price = value;
+                }
+            }
         }
-    }
-}
-private decimal price;
-public string Price
-{
-    get { return price; }
-    set
-    {
-        if (value == " ")
+        private int stockQuantity;
+        public string StockQuantity
         {
-            throw new NullReferenceException();
+            get { return stockQuantity; }
+            set
+            {
+                if (value == " ")
+                {
+                    throw new NullReferenceException();
+                }
+                else
+                {
+                    stockQuantity = value;
+                }
+            }
         }
-        else
+        private string description;
+        public string Description
         {
-            price = value;
+            get { return description; }
+            set
+            {
+                if (value == " ")
+                {
+                    throw new NullReferenceException();
+                }
+                else
+                {
+                    description = value;
+                }
+            }
         }
-    }
-}
-private int stockQuantity;
-public string StockQuantity
-{
-    get { return stockQuantity; }
-    set
-    {
-        if (value == " ")
+        private bool isAvailable;
+        public bool IsAvailable
         {
-            throw new NullReferenceException();
+            get { return description; }
+            set { description = value;}
+          
         }
-        else
-        {
-            stockQuantity = value;
-        }
-    }
-}
-private string description;
-public string Description
-{
-    get { return description; }
-    set
-    {
-        if (value == " ")
-        {
-            throw new NullReferenceException();
-        }
-        else
-        {
-            description = value;
-        }
-    }
-}
-private bool isAvailable;
-public bool IsAvailable
-{
-    get { return description; }
-    set { description = value;}
-  
-}
 
-		public Product(string productID, string name, string category, decimal price, int stockQuantity, string description, bool isAvaileble)
+        public Product(string productID, string name, string category, decimal price, int stockQuantity, string description, bool isAvaileble)
 		{
-			this.productID = productID;
+			
 		}
 	}
 }
