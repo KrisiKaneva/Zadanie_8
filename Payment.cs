@@ -1,17 +1,18 @@
 using System;
-namespace Zadanie_8
+using System.Collections.Generic;
+namespace Zadanie_novo
 {
 	public class Payment
 	{
-		private string paymentID;
+        private string paymentID;
         public string PaymentID
         {
             get { return paymentID; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    throw new ArgumentException("Cannot be null or empty!");
                 }
                 else
                 {
@@ -25,9 +26,9 @@ namespace Zadanie_8
             get { return orderID; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    throw new ArgumentException("Cannot be null or empty!");
                 }
                 else
                 {
@@ -36,19 +37,20 @@ namespace Zadanie_8
             }
         }
         private DateTime paymentDate;
-        public string PaymentDate
+        public DateTime PaymentDate
         {
             get { return paymentDate; }
             set
             {
-                if (value == " ")
+                if (value == default(DateTime))
                 {
-                    throw new NullReferenceException();
+                    throw new ArgumentException("Payment date cannot be the default date.", nameof(value));
                 }
                 else
                 {
                     paymentDate = value;
                 }
+
             }
         }
         private string paymentMethod;
@@ -59,7 +61,7 @@ namespace Zadanie_8
             {
                 if (value != "Credit card" || value != "Debit card" || value != "PayPal" || value != "Bank transfer")
                 {
-                    throw new NullReferenceException();
+                    throw new ArgumentException("Invalid payment method. Valid options are: Credit card, Debit card, PayPal, Bank transfer.", nameof(value));
                 }
                 else
                 {
@@ -67,10 +69,6 @@ namespace Zadanie_8
                 }
             }
         }
-
-        public Payment()
-		{
-		}
-	}
+    }
 }
 
