@@ -1,9 +1,10 @@
 using System;
-namespace Zadanie_8
+using System.Collections.Generic;
+namespace Zadanie_novo
 {
 	public class Order
 	{
-		private string orderID;
+        private string orderID;
         public string OrderID
         {
             get { return orderID; }
@@ -36,22 +37,51 @@ namespace Zadanie_8
                 }
             }
         }
-        private DateTime orderDate;
-        public string OrderDate
+        private DateTime orderDate; //change
+        public DateTime OrderDate
         {
-            get { return orderID; }
+            get { return orderDate; }
             set
             {
-                if (value == " ")
+                if (value == default(DateTime))
                 {
-                    throw new NullReferenceException();
+                    throw new ArgumentException("Order date cannot be the default date.");
                 }
                 else
                 {
-                    orderID = value;
+                    orderDate = value;
                 }
             }
         }
+
+        public List<Product> OrderItems { get; set; }
+
+        private decimal totalAmount;
+        public decimal TotalAmount
+        {
+            get { return totalAmount; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException();
+                }
+            }
+        }
+
+        private string status;
+        public string Status
+        {
+            get { return status; }
+            set
+            {
+                if(value==" ")
+                {
+                    throw new Exception();
+                }
+            }
+        }
+
         private string location;
         public string Location
         {
@@ -68,10 +98,6 @@ namespace Zadanie_8
                 }
             }
         }
-
-
-        public Order()
-		{
-		}
-	}
+    }
 }
+
