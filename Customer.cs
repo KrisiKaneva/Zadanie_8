@@ -1,27 +1,28 @@
 using System;
-namespace Zadanie_8
+using System.Collections.Generic;
+namespace Zadanie_novo
 {
 	public class Customer
 	{
-		private string customerID;
-		public string CustomerName
+        private string customerID;
+        public string CustomerName
         {
             get { return customerID; }
             set
-			{
-				if (value == " ")
-				{
-					throw new NullReferenceException();
-				}
-				else
-				{
-					customerID = value;
-				}
-			}
+            {
+                if (value == " ")
+                {
+                    throw new NullReferenceException();
+                }
+                else
+                {
+                    customerID = value;
+                }
+            }
         }
 
         private string fullName;
-		public string FullName
+        public string FullName
         {
             get { return fullName; }
             set
@@ -38,7 +39,7 @@ namespace Zadanie_8
         }
 
         private string email;
-		public string Email
+        public string Email
         {
             get { return email; }
             set
@@ -55,7 +56,7 @@ namespace Zadanie_8
         }
 
         private string phoneNumber;
-		public string PhoneNumber
+        public string PhoneNumber
         {
             get { return phoneNumber; }
             set
@@ -72,7 +73,7 @@ namespace Zadanie_8
         }
 
         private string shippingAddress;
-		public string ShippingAddress
+        public string ShippingAddress
         {
             get { return shippingAddress; }
             set
@@ -87,7 +88,6 @@ namespace Zadanie_8
                 }
             }
         }
-
-
     }
 }
+
