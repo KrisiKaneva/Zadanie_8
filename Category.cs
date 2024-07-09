@@ -1,36 +1,35 @@
 using System;
 using System.Collections.Generic;
-
-namespace Zadanie_8
+namespace Zadanie_novo
 {
 	public class Category
 	{
-		private string categoryID;
-		public string CategoryID
-		{
-			get { return categoryID; }
-			set
-			{
-				if (value == " ")
-				{
-					throw new NullReferenceException();
-				}
-				else
-				{
-					categoryID = value;
-				}
-			}
-		}
+        private string categoryID; //change
+        public string CategoryID
+        {
+            get { return categoryID; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("CategoryID cannot be null or whitespace.");
+                }
+                else
+                {
+                    categoryID = value;
+                }
+            }
+        }
 
-		private string name;
+        private string name; //change
         public string Name
         {
             get { return name; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new NullReferenceException();
+                    throw new ArgumentNullException(nameof(value), "Name cannot be null or whitespace.");
                 }
                 else
                 {
@@ -39,16 +38,15 @@ namespace Zadanie_8
             }
         }
 
-
         private string description;
         public string Description
         {
             get { return description; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new NullReferenceException();
+                    throw new ArgumentNullException(nameof(value), "Description cannot be null or whitespace.");
                 }
                 else
                 {
@@ -57,12 +55,7 @@ namespace Zadanie_8
             }
         }
 
-        public List<Product> Products;
-
-
-        public Category()
-		{
-		}
-	}
+        public List<Product> Products { get; set; } //change
+    }
 }
 
