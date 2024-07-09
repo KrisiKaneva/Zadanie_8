@@ -8,6 +8,7 @@ namespace Zadanie_8
         public string Name { get; set; }
         public string Address { get; set; }
         public string Manager { get; set; }
+        public string StoreType { get; set; }
 
         public List<Product> Products { get; set; } = new List<Product>();
         public List<Customer> Customers { get; set; } = new List<Customer>();
@@ -50,9 +51,9 @@ namespace Zadanie_8
             return result;
         }
 
-        public List<Product> ListAllProducts()
+        public  ListAllProducts() // changed
         {
-            return new List<Product>(Products);
+            Console.WriteLine(string.Join(", ", Products)
         }
 
         public void AddCustomer(Customer customer)
@@ -90,9 +91,9 @@ namespace Zadanie_8
             return result;
         }
 
-        public List<Customer> ListAllCustomers()
+        public void ListAllCustomers() // changed
         {
-            return new List<Customer>(Customers);
+            Console.WriteLine(string.Join(", ", Customers)
         }
 
         public void PlaceOrder(Order order)
@@ -134,9 +135,9 @@ namespace Zadanie_8
             }
         }
 
-        public List<Category> ListAllCategories()
+        public void ListAllCategories() // changed
         {
-            return new List<Category>(Categories);
+            Console.WriteLine(string.Join(", ", Categories);
         }
 
         public void ProcessPayment(Payment payment)
@@ -144,14 +145,19 @@ namespace Zadanie_8
             Payments.Add(payment);
         }
 
-        public string GenerateSalesReport()
+        public void GenerateSalesReport() // changed
         {
-            return "Sales Report Generated";
+            Console.WriteLine($"A total of {Products.Count} products have been sold.");
+            Console.WriteLine($"Products from {Categories.Count} categories have been sold - {ListAllCategories}");
+            Console.WriteLine($"There is a total of {Orders.Count} orders and a total of {Payments.Count} payments");
+            Console.WriteLine("Sales Report Generated");
         }
 
-        public string GenerateCustomerReport()
+        public void GenerateCustomerReport() // changed
         {
-            return "Customer Report Generated";
+            Console.WriteLine($"There have been {Customers.Count} customers so far - {ListAllCustomers}");
+            Console.WriteLine("Customers Report Generated")
         }
+        
     }
 }
