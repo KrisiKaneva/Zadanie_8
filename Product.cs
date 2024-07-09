@@ -1,9 +1,10 @@
 using System;
-namespace Zadanie_8
+using System.Collections.Generic;
+namespace Zadanie_novo
 {
 	public class Product
 	{
-		private string productID;
+        private string productID;
         public string ProductID
         {
             get { return productID; }
@@ -54,12 +55,12 @@ namespace Zadanie_8
             }
         }
         private decimal price;
-        public string Price
+        public decimal Price //change
         {
             get { return price; }
             set
             {
-                if (value == " ")
+                if (value <0)
                 {
                     throw new NullReferenceException();
                 }
@@ -70,12 +71,12 @@ namespace Zadanie_8
             }
         }
         private int stockQuantity;
-        public string StockQuantity
+        public int StockQuantity //change
         {
             get { return stockQuantity; }
             set
             {
-                if (value == " ")
+                if (value <0)
                 {
                     throw new NullReferenceException();
                 }
@@ -102,17 +103,6 @@ namespace Zadanie_8
             }
         }
         private bool isAvailable;
-        public bool IsAvailable
-        {
-            get { return description; }
-            set { description = value;}
-          
-        }
-
-        public Product(string productID, string name, string category, decimal price, int stockQuantity, string description, bool isAvaileble)
-		{
-			
-		}
-	}
+        public bool IsAvailable { get; set; } //change
+    }
 }
-
