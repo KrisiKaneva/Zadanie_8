@@ -1,9 +1,13 @@
 using System;
 using System.Collections.Generic;
-namespace Zadanie_novo
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testingIvo
 {
-	public class Payment
-	{
+    internal class Payment
+    {
         private string paymentID;
         public string PaymentID
         {
@@ -53,6 +57,22 @@ namespace Zadanie_novo
 
             }
         }
+        private decimal amount;
+        public decimal Amount
+        {
+            get { return amount; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Amount must be a positive number");
+                }
+                else
+                {
+                    amount = value;
+                }
+            }
+        }
         private string paymentMethod;
         public string PaymentMethod
         {
@@ -71,4 +91,3 @@ namespace Zadanie_novo
         }
     }
 }
-
