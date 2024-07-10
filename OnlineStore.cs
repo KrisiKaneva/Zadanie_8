@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zadanie_novo;
 
-namespace testingIvo
+namespace Zadanie_8
 {
     internal class OnlineStore
     {
@@ -52,6 +53,7 @@ namespace testingIvo
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine("The searched product was not found.");
                 }
             }
@@ -96,6 +98,7 @@ namespace testingIvo
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine("The searched customer was not found.");
                 }
             }
@@ -156,6 +159,7 @@ namespace testingIvo
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine("The searched category was not found.");
                 }
             }
@@ -174,6 +178,7 @@ namespace testingIvo
 
         public void GenerateSalesReport() // changed
         {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine($"A total of {Products.Count} products have been sold.");
             Console.WriteLine($"Products from {Categories.Count} categories have been sold - {ListAllCategories()}.");
             Console.WriteLine($"There is a total of {Orders.Count} orders and a total of {Payments.Count} payments.");
@@ -182,6 +187,7 @@ namespace testingIvo
 
         public void GenerateCustomerReport() // changed
         {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine($"There have been {Customers.Count} customers so far - {ListAllCustomers()}");
             Console.WriteLine("Customers Report Generated");
         }
