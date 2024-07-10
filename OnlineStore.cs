@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zadanie_novo;
 
 namespace Zadanie_8
 {
@@ -196,7 +195,7 @@ namespace Zadanie_8
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine($"A total of {Products.Count} products have been sold.");
-            Console.WriteLine($"Products from {Categories.Count} categories have been sold - {ListAllCategories()}.");
+            Console.WriteLine($"Products from {Categories.Count} category have been sold - {ListAllCategories()}.");
             Console.WriteLine($"There is a total of {Orders.Count} orders and a total of {Payments.Count} payments.");
             Console.WriteLine("Sales Report Generated");
         }
