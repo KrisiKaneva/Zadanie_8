@@ -2,7 +2,7 @@ using System.Net;
 using System.Xml.Linq;
 using Zadanie_novo;
 
-namespace testingIvo
+namespace Zadanie_8
 {
     internal class Program
     {
