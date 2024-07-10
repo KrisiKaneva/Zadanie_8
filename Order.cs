@@ -48,7 +48,7 @@ namespace Zadanie_8
                 if (value == default(DateTime))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("Order date cannot be the default date.");
+                    throw new ArgumentException("Order date can not be the default date.");
                 }
                 else
                 {
