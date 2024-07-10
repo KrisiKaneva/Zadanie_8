@@ -16,6 +16,7 @@ namespace testingIvo
             {
                 if (string.IsNullOrEmpty(value))
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     throw new ArgumentException("Cannot be null or empty!");
                 }
                 else
@@ -32,6 +33,7 @@ namespace testingIvo
             {
                 if (string.IsNullOrEmpty(value))
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     throw new ArgumentException("Cannot be null or empty!");
                 }
                 else
@@ -48,6 +50,7 @@ namespace testingIvo
             {
                 if (value == default(DateTime))
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     throw new ArgumentException("Payment date cannot be the default date.", nameof(value));
                 }
                 else
@@ -65,6 +68,7 @@ namespace testingIvo
             {
                 if (value < 0)
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     throw new ArgumentException("Amount must be a positive number");
                 }
                 else
@@ -81,6 +85,7 @@ namespace testingIvo
             {
                 if (value != "Credit card" || value != "Debit card" || value != "PayPal" || value != "Bank transfer")
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     throw new ArgumentException("Invalid payment method. Valid options are: Credit card, Debit card, PayPal, Bank transfer.", nameof(value));
                 }
                 else
