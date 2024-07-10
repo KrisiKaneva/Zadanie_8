@@ -17,7 +17,7 @@ namespace Zadanie_8
                 if (string.IsNullOrEmpty(value))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("Cannot be null or empty!");
+                    throw new ArgumentException("Can not be null or empty!");
                 }
                 else
                 {
@@ -34,7 +34,7 @@ namespace Zadanie_8
                 if (string.IsNullOrEmpty(value))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("Cannot be null or empty!");
+                    throw new ArgumentException("Can not be null or empty!");
                 }
                 else
                 {
@@ -51,7 +51,7 @@ namespace Zadanie_8
                 if (value == default(DateTime))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("Payment date cannot be the default date.", nameof(value));
+                    throw new ArgumentException("Payment date can not be the default date.", nameof(value));
                 }
                 else
                 {
