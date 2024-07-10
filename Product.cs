@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 namespace Zadanie_8
 {
-	public class Product
-	{
+    public class Product
+    {
         private string productID;
         public string ProductID
         {
@@ -13,7 +13,7 @@ namespace Zadanie_8
                 if (value == " ")
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("Enter the correct ID");
+                    throw new ArgumentException("Enter your ID");
                 }
                 else
                 {
@@ -31,7 +31,7 @@ namespace Zadanie_8
                 if (string.IsNullOrEmpty(value))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("Name cannot be empty or null!");
+                    throw new ArgumentException("Namespace can not be empty!");
                 }
                 else
                 {
@@ -49,7 +49,7 @@ namespace Zadanie_8
                 if (string.IsNullOrEmpty(value))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("Category cannot be empty or null!");
+                    throw new ArgumentException("Category can not be empty!");
                 }
                 else
                 {
@@ -63,9 +63,9 @@ namespace Zadanie_8
             get { return price; }
             set
             {
-                if (value <0)
+                if (value < 0)
                 {
-                    throw new NullReferenceException("Enter correct price!");
+                    throw new NullReferenceException("Enter the price!");
                 }
                 else
                 {
@@ -79,10 +79,10 @@ namespace Zadanie_8
             get { return stockQuantity; }
             set
             {
-                if (value <0)
+                if (value < 0)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentNullException("Must be above or 0!");
+                    throw new ArgumentNullException("It must be a positive number!");
                 }
                 else
                 {
