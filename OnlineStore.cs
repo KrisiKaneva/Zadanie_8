@@ -59,6 +59,22 @@ namespace Zadanie_8
             }
             return result;
         }
+        public List<Product> SearchProductByCategory(string category)
+        {
+            List<Product> result = new List<Product>();
+            foreach (var product in Products)
+            {
+                if (product.Category.IndexOf(category, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    result.Add(product);
+                }
+                else
+                {
+                    Console.WriteLine("The searched product was not found.");
+                }
+            }
+            return result;
+        }
 
         public List<Product> ListAllProducts() // changed
         {
