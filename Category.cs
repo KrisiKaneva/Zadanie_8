@@ -1,9 +1,13 @@
 using System;
 using System.Collections.Generic;
-namespace Zadanie_novo
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testingIvo
 {
-	public class Category
-	{
+    internal class Category
+    {
         private string categoryID; //change
         public string CategoryID
         {
@@ -58,4 +62,3 @@ namespace Zadanie_novo
         public List<Product> Products { get; set; } //change
     }
 }
-
