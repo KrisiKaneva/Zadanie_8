@@ -1,9 +1,13 @@
 using System;
 using System.Collections.Generic;
-namespace Zadanie_novo
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testingIvo
 {
-	public class Product
-	{
+    internal class Product
+    {
         private string productID;
         public string ProductID
         {
@@ -60,7 +64,7 @@ namespace Zadanie_novo
             get { return price; }
             set
             {
-                if (value <0)
+                if (value < 0)
                 {
                     throw new NullReferenceException();
                 }
@@ -76,7 +80,7 @@ namespace Zadanie_novo
             get { return stockQuantity; }
             set
             {
-                if (value <0)
+                if (value < 0)
                 {
                     throw new NullReferenceException();
                 }
