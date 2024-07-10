@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zadanie_novo;
 
 namespace Zadanie_8
 {
@@ -18,7 +17,7 @@ namespace Zadanie_8
                 if (string.IsNullOrWhiteSpace(value))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("CategoryID cannot be null or whitespace.");
+                    throw new ArgumentException("Category ID can not be null or empty.");
                 }
                 else
                 {
@@ -36,7 +35,7 @@ namespace Zadanie_8
                 if (string.IsNullOrWhiteSpace(value))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentNullException(nameof(value), "Name cannot be null or whitespace.");
+                    throw new ArgumentNullException(nameof(value), "Name can not be null or empty.");
                 }
                 else
                 {
@@ -54,7 +53,7 @@ namespace Zadanie_8
                 if (string.IsNullOrWhiteSpace(value))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentNullException(nameof(value), "Description cannot be null or whitespace.");
+                    throw new ArgumentNullException(nameof(value), "Description cannot be null or empty.");
                 }
                 else
                 {
@@ -66,3 +65,4 @@ namespace Zadanie_8
         public List<Product> Products { get; set; } //change
     }
 }
+
