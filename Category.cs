@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Zadanie_novo;
 
-namespace testingIvo
+namespace Zadanie_8
 {
     internal class Category
     {
