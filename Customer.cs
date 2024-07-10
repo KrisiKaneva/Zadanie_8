@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
-namespace Zadanie_novo
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testingIvo
 {
-	public class Customer
-	{
+    internal class Customer
+    {
         private string customerID;
-        public string CustomerName
+        public string CustomerID
         {
             get { return customerID; }
             set
@@ -90,4 +94,3 @@ namespace Zadanie_novo
         }
     }
 }
-
