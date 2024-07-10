@@ -14,9 +14,10 @@ namespace testingIvo
             get { return customerID; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentException();
                 }
                 else
                 {
@@ -33,7 +34,8 @@ namespace testingIvo
             {
                 if (value == " ")
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new Exception("Enter valid name!");
                 }
                 else
                 {
@@ -50,7 +52,8 @@ namespace testingIvo
             {
                 if (value == " ")
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentNullException("Enter valid email!");
                 }
                 else
                 {
@@ -65,9 +68,10 @@ namespace testingIvo
             get { return phoneNumber; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new NullReferenceException("Enter valid phone number!");
                 }
                 else
                 {
@@ -82,9 +86,10 @@ namespace testingIvo
             get { return shippingAddress; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new Exception("Enter valid shipping address!");
                 }
                 else
                 {
