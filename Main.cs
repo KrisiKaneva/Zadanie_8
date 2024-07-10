@@ -1,6 +1,5 @@
 using System.Net;
 using System.Xml.Linq;
-using Zadanie_novo;
 
 namespace Zadanie_8
 {
@@ -12,29 +11,29 @@ namespace Zadanie_8
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                Console.WriteLine("Главно меню:");
-                Console.WriteLine("1. Добавяне на продукт");
-                Console.WriteLine("2. Премахване на продукт");
-                Console.WriteLine("3. Търсене на продукт по име");
-                Console.WriteLine("4. Списък с всички продукти");
-                Console.WriteLine("5. Добавяне на клиент");
-                Console.WriteLine("6. Премахване на клиент");
-                Console.WriteLine("7. Търсене на клиент по име");
-                Console.WriteLine("8. Списък с всички клиенти");
-                Console.WriteLine("9. Поставяне на поръчка");
-                Console.WriteLine("10. Обновяване на статус на поръчка");
-                Console.WriteLine("11. Добавяне на категория");
-                Console.WriteLine("12. Премахване на категория");
-                Console.WriteLine("13. Търсене на категория по име");
-                Console.WriteLine("14. Списък с всички категории");
-                Console.WriteLine("15. Обработка на плащане");
-                Console.WriteLine("16. Обновяване на данните за магазина");
-                Console.WriteLine("17. Генериране на отчет за продажбите");
-                Console.WriteLine("18. Генериране на отчет за клиентите");
-                Console.WriteLine("19. Генериране на информация за магазина");
-                Console.WriteLine("20. Изход");
+                Console.WriteLine("Home menu:");
+                Console.WriteLine("1. Eter the product");
+                Console.WriteLine("2. Remove product");
+                Console.WriteLine("3. Serch product by name");
+                Console.WriteLine("4. List of products");
+                Console.WriteLine("5. Add client");
+                Console.WriteLine("6. Remove client");
+                Console.WriteLine("7. Serch client by name");
+                Console.WriteLine("8. List of clients");
+                Console.WriteLine("9. Place order");
+                Console.WriteLine("10. Restore order status");
+                Console.WriteLine("11. Add category");
+                Console.WriteLine("12. Remove category");
+                Console.WriteLine("13. Serch category by name");
+                Console.WriteLine("14. List of categories");
+                Console.WriteLine("15. Payment processing");
+                Console.WriteLine("16. Edit store details");
+                Console.WriteLine("17. Generate sails report");
+                Console.WriteLine("18. Generate clientele report");
+                Console.WriteLine("19. Generate store information");
+                Console.WriteLine("20. Exit");
 
-                Console.Write("Изберете команда: ");
+                Console.Write("Chose a command: ");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.Blue;
                 string choice = Console.ReadLine();
@@ -109,27 +108,27 @@ namespace Zadanie_8
         public static void AddProduct(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на продукта:");
+            Console.WriteLine("Enter product ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете име на продукта:");
+            Console.WriteLine("Enter product name:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string name = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете категория на продукта:");
+            Console.WriteLine("Enter product category:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string category = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете цена на продукта:");
+            Console.WriteLine("Enter product price:");
             Console.ForegroundColor = ConsoleColor.Blue;
             decimal price = decimal.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете количество на продукта:");
+            Console.WriteLine("Enter product quantity:");
             Console.ForegroundColor = ConsoleColor.Blue;
             int quantity = int.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете описание на продукта:");
+            Console.WriteLine("Enter product description:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string description = Console.ReadLine();
 
@@ -146,26 +145,26 @@ namespace Zadanie_8
 
             store.AddProduct(product);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Продуктът е добавен успешно.");
+            Console.WriteLine("The product has been successfully added.");
             Console.ResetColor();
         }
         //2
         public static void RemoveProduct(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на продукта за премахване:");
+            Console.WriteLine("Enter product ID to remove:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             store.RemoveProduct(id);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Продуктът е премахнат успешно.");
+            Console.WriteLine("The product has been siccessfully removed.");
             Console.ResetColor();
         }
         //3
         public static void SearchProductByName(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете име на продукта за търсене:");
+            Console.WriteLine("Enter name to search product:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string name = Console.ReadLine();
             var products = store.SearchProductByName(name);
@@ -191,26 +190,26 @@ namespace Zadanie_8
         public static void AddCustomer(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на клиента:");
+            Console.WriteLine("Enter client ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете име на клиента:");
+            Console.WriteLine("Enter client name:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string name = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете имейл на клиента:");
+            Console.WriteLine("Enter client e-mail:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string email = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете телефонен номер на клиента:");
+            Console.WriteLine("Enter client telephone number:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string phone = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете адрес за доставка на клиента:");
+            Console.WriteLine("Enter the client's delivery sddress:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string address = Console.ReadLine();
-            
+
             Customer customer = new Customer
             {
                 CustomerID = id,
@@ -222,26 +221,26 @@ namespace Zadanie_8
 
             store.AddCustomer(customer);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Клиентът е добавен успешно.");
+            Console.WriteLine("The client has been successfully added.");
             Console.ResetColor();
         }
         //6
         public static void RemoveCustomer(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на клиента за премахване:");
+            Console.WriteLine("Enter client ID to remove:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             store.RemoveCustomer(id);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Клиентът е премахнат успешно.");
+            Console.WriteLine("The client has been successfully removed.");
             Console.ResetColor();
         }
         //7
         public static void SearchCustomerByName(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете име на клиента за търсене:");
+            Console.WriteLine("Enter name to search client:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string name = Console.ReadLine();
             var customers = store.SearchCustomerByName(name);
@@ -267,15 +266,15 @@ namespace Zadanie_8
         public static void PlaceOrder(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на поръчката:");
+            Console.WriteLine("Enter order ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string orderId = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на клиента:");
+            Console.WriteLine("Enter client ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string customerId = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете дата на поръчката (YYYY-MM-DD):");
+            Console.WriteLine("Enter date of order (YYYY-MM-DD):");
             Console.ForegroundColor = ConsoleColor.Blue;
             DateTime orderDate = DateTime.Parse(Console.ReadLine());
 
@@ -283,10 +282,10 @@ namespace Zadanie_8
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                Console.WriteLine("Въведете ID на продукта за добавяне към поръчката (или 'край' за завършване):");
+                Console.WriteLine("Enter product ID to add to the order (or 'end' to finalize order):");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 string productId = Console.ReadLine();
-                if (productId.ToLower() == "край") break;
+                if (productId.ToLower() == "end") break;
 
                 var product = store.Products.FirstOrDefault(p => p.ProductID == productId);
                 if (product != null)
@@ -296,7 +295,7 @@ namespace Zadanie_8
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.DarkBlue;
-                    Console.WriteLine("Продуктът не е намерен.");
+                    Console.WriteLine("Product not found.");
                 }
             }
 
@@ -309,42 +308,42 @@ namespace Zadanie_8
                 OrderDate = orderDate,
                 OrderItems = orderItems,
                 TotalAmount = totalAmount,
-                Status = "чакаща"
+                Status = "in waiting"
             };
 
             store.PlaceOrder(order);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Успешно направеня поръчка.");
+            Console.WriteLine("The order has been successfully made.");
             Console.ResetColor();
         }
         //10
         public static void UpdateOrderStatus(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на поръчката:");
+            Console.WriteLine("Enter order ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string orderId = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете нов статус на поръчката (чакаща, обработена, изпратена, завършена):");
+            Console.WriteLine("Enter new order status (in waiting, processed, sent, delivered):");
             string status = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.Blue;
             store.UpdateOrderStatus(orderId, status);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Статусът на поръчката е обновен успешно.");
+            Console.WriteLine("Order status has been updated.");
         }
         //11
         public static void AddCategory(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на категорията:");
+            Console.WriteLine("Enter category ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете име на категорията:");
+            Console.WriteLine("Enter category name:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string name = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете описание на категорията:");
+            Console.WriteLine("Enter category description:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string description = Console.ReadLine();
 
@@ -358,24 +357,24 @@ namespace Zadanie_8
 
             store.AddCategory(category);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Категорията е добавена успешно.");
+            Console.WriteLine("Category has been successfully added.");
         }
         //12
         public static void RemoveCategory(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на категорията за премахване:");
+            Console.WriteLine("Enter ID of the catedory to remove:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             store.RemoveCategory(id);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Категорията е премахната успешно.");
+            Console.WriteLine("Category has been successfully removed.");
         }
         //13 new
         public static void SearchCategoryByName(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете име на категорията за търсене:");
+            Console.WriteLine("Enter name to search category:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string name = Console.ReadLine();
             var categories = store.SearchCategoryByName(name);
@@ -401,23 +400,23 @@ namespace Zadanie_8
         public static void ProcessPayment(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на плащането:");
+            Console.WriteLine("Enter payment ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string paymentId = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете ID на поръчката:");
+            Console.WriteLine("Enter order ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string orderId = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете дата на плащането (YYYY-MM-DD):");
+            Console.WriteLine("Enter date of payment  (YYYY-MM-DD):");
             Console.ForegroundColor = ConsoleColor.Blue;
             DateTime paymentDate = DateTime.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете сума на плащането:");
+            Console.WriteLine("Enter payment sum:");
             Console.ForegroundColor = ConsoleColor.Blue;
             decimal amount = decimal.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете метод на плащане (кредитна карта, PayPal, банков превод):");
+            Console.WriteLine("Enter payment method (credit card,debit card, PayPal, bank transfer):");
             Console.ForegroundColor = ConsoleColor.Blue;
             string paymentMethod = Console.ReadLine();
 
@@ -432,31 +431,31 @@ namespace Zadanie_8
 
             store.ProcessPayment(payment);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Плащането е обработено успешно.");
+            Console.WriteLine("Payment has been successfully processed.");
             Console.ResetColor();
         }
         //16 new
         public static void RenewStoreInformation(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете името на магазина:");
+            Console.WriteLine("Enter store name:");
             Console.ForegroundColor = ConsoleColor.Blue;
             store.Name = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете адреса на магазина:");
+            Console.WriteLine("Enter store address:");
             Console.ForegroundColor = ConsoleColor.Blue;
             store.Address = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете името на мениджъра:");
+            Console.WriteLine("Enter name of the manager:");
             Console.ForegroundColor = ConsoleColor.Blue;
             store.Manager = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Въведете вида на магазина:");
+            Console.WriteLine("Enter store type:");
             Console.ForegroundColor = ConsoleColor.Blue;
             store.StoreType = Console.ReadLine();
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Информацията за магазина е обновена успешно.");
+            Console.WriteLine("Store information has been successfully added.");
             Console.ResetColor();
         }
         //17
