@@ -2,17 +2,18 @@ using System;
 using System.Collections.Generic;
 namespace Zadanie_novo
 {
-	public class Order
-	{
+    public class Order
+    {
         private string orderID;
         public string OrderID
         {
             get { return orderID; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new Exception("Enter valid order ID!");
                 }
                 else
                 {
@@ -27,9 +28,10 @@ namespace Zadanie_novo
             get { return customerID; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentException("Enter valid customer ID");
                 }
                 else
                 {
@@ -45,6 +47,7 @@ namespace Zadanie_novo
             {
                 if (value == default(DateTime))
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     throw new ArgumentException("Order date cannot be the default date.");
                 }
                 else
@@ -64,7 +67,8 @@ namespace Zadanie_novo
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentException("Enter valid total amount!");
                 }
             }
         }
@@ -75,9 +79,10 @@ namespace Zadanie_novo
             get { return status; }
             set
             {
-                if(value==" ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new Exception();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new Exception("Enter valid status!");
                 }
             }
         }
@@ -88,8 +93,9 @@ namespace Zadanie_novo
             get { return location; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     throw new NullReferenceException();
                 }
                 else
