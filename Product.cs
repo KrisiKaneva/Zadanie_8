@@ -1,13 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace testingIvo
+namespace Zadanie_novo
 {
-    internal class Product
-    {
+	public class Product
+	{
         private string productID;
         public string ProductID
         {
@@ -16,7 +12,8 @@ namespace testingIvo
             {
                 if (value == " ")
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentException("Enter the correct ID");
                 }
                 else
                 {
@@ -31,9 +28,10 @@ namespace testingIvo
             get { return name; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentException("Name cannot be empty or null!");
                 }
                 else
                 {
@@ -48,9 +46,10 @@ namespace testingIvo
             get { return category; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentException("Category cannot be empty or null!");
                 }
                 else
                 {
@@ -64,9 +63,9 @@ namespace testingIvo
             get { return price; }
             set
             {
-                if (value < 0)
+                if (value <0)
                 {
-                    throw new NullReferenceException();
+                    throw new NullReferenceException("Enter correct price!");
                 }
                 else
                 {
@@ -80,9 +79,10 @@ namespace testingIvo
             get { return stockQuantity; }
             set
             {
-                if (value < 0)
+                if (value <0)
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentNullException("Must be above or 0!");
                 }
                 else
                 {
@@ -96,9 +96,10 @@ namespace testingIvo
             get { return description; }
             set
             {
-                if (value == " ")
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new NullReferenceException();
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new NullReferenceException("Enter valid description!");
                 }
                 else
                 {
