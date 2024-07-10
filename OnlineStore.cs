@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Zadanie_8
+namespace testingIvo
 {
-	public class OnlineStore
-	{
+    internal class OnlineStore
+    {
         public string Name { get; set; }
         public string Address { get; set; }
         public string Manager { get; set; }
@@ -47,13 +50,17 @@ namespace Zadanie_8
                 {
                     result.Add(product);
                 }
+                else
+                {
+                    Console.WriteLine("The searched product was not found.");
+                }
             }
             return result;
         }
 
-        public  ListAllProducts() // changed
+        public List<Product> ListAllProducts() // changed
         {
-            Console.WriteLine(string.Join(", ", Products)
+            return new List<Product>(Products);
         }
 
         public void AddCustomer(Customer customer)
@@ -87,13 +94,17 @@ namespace Zadanie_8
                 {
                     result.Add(customer);
                 }
+                else
+                {
+                    Console.WriteLine("The searched customer was not found.");
+                }
             }
             return result;
         }
 
-        public void ListAllCustomers() // changed
+        public List<Customer> ListAllCustomers() // changed
         {
-            Console.WriteLine(string.Join(", ", Customers)
+            return new List<Customer>(Customers);
         }
 
         public void PlaceOrder(Order order)
@@ -134,10 +145,26 @@ namespace Zadanie_8
                 Categories.Remove(categoryToRemove);
             }
         }
-
-        public void ListAllCategories() // changed
+        public List<Category> SearchCategoryByName(string name)
         {
-            Console.WriteLine(string.Join(", ", Categories);
+            List<Category> result = new List<Category>();
+            foreach (var category in Categories)
+            {
+                if (category.Name.IndexOf(name, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    result.Add(category);
+                }
+                else
+                {
+                    Console.WriteLine("The searched category was not found.");
+                }
+            }
+            return result;
+        }
+
+        public List<Category> ListAllCategories() // changed
+        {
+            return new List<Category>(Categories);
         }
 
         public void ProcessPayment(Payment payment)
@@ -148,16 +175,15 @@ namespace Zadanie_8
         public void GenerateSalesReport() // changed
         {
             Console.WriteLine($"A total of {Products.Count} products have been sold.");
-            Console.WriteLine($"Products from {Categories.Count} categories have been sold - {ListAllCategories}");
-            Console.WriteLine($"There is a total of {Orders.Count} orders and a total of {Payments.Count} payments");
+            Console.WriteLine($"Products from {Categories.Count} categories have been sold - {ListAllCategories()}.");
+            Console.WriteLine($"There is a total of {Orders.Count} orders and a total of {Payments.Count} payments.");
             Console.WriteLine("Sales Report Generated");
         }
 
         public void GenerateCustomerReport() // changed
         {
-            Console.WriteLine($"There have been {Customers.Count} customers so far - {ListAllCustomers}");
-            Console.WriteLine("Customers Report Generated")
+            Console.WriteLine($"There have been {Customers.Count} customers so far - {ListAllCustomers()}");
+            Console.WriteLine("Customers Report Generated");
         }
-        
     }
 }
