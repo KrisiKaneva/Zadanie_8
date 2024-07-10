@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -89,7 +90,7 @@ namespace Zadanie_8
                 if (string.IsNullOrEmpty(value))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new Exception("Enter valid shipping address!");
+                    throw new Exception("Enter valid order address!");
                 }
                 else
                 {
@@ -99,3 +100,4 @@ namespace Zadanie_8
         }
     }
 }
+
