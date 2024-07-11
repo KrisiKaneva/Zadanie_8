@@ -39,7 +39,7 @@ namespace Zadanie_8
                 }
             }
         }
-        private DateTime orderDate; //change
+        private DateTime orderDate; 
         public DateTime OrderDate
         {
             get { return orderDate; }
