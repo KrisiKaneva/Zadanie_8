@@ -58,7 +58,7 @@ namespace Zadanie_8
             }
         }
         private decimal price;
-        public decimal Price //change
+        public decimal Price 
         {
             get { return price; }
             set
@@ -74,7 +74,7 @@ namespace Zadanie_8
             }
         }
         private int stockQuantity;
-        public int StockQuantity //change
+        public int StockQuantity 
         {
             get { return stockQuantity; }
             set
@@ -108,6 +108,6 @@ namespace Zadanie_8
             }
         }
         private bool isAvailable;
-        public bool IsAvailable { get; set; } //change
+        public bool IsAvailable { get; set; } 
     }
 }
