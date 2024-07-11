@@ -120,7 +120,7 @@ namespace Zadanie_8
             return result;
         }
 
-        public List<Customer> ListAllCustomers() // changed
+        public List<Customer> ListAllCustomers() 
         {
             return new List<Customer>(Customers);
         }
@@ -181,7 +181,7 @@ namespace Zadanie_8
             return result;
         }
 
-        public List<Category> ListAllCategories() // changed
+        public List<Category> ListAllCategories() 
         {
             return new List<Category>(Categories);
         }
@@ -200,7 +200,7 @@ namespace Zadanie_8
             Console.WriteLine("Sales Report Generated");
         }
 
-        public void GenerateCustomerReport() // changed
+        public void GenerateCustomerReport() 
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine($"There have been {Customers.Count} customers so far - {ListAllCustomers()}");
