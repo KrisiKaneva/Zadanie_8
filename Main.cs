@@ -12,28 +12,28 @@ namespace Zadanie_8
             {
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine("Home menu:");
-                Console.WriteLine("1. Eter the product");
+                Console.WriteLine("1. Enter the product");
                 Console.WriteLine("2. Remove product");
-                Console.WriteLine("3. Serch product by name");
+                Console.WriteLine("3. Search product by name");
                 Console.WriteLine("4. List of products");
-                Console.WriteLine("5. Add client");
-                Console.WriteLine("6. Remove client");
-                Console.WriteLine("7. Serch client by name");
-                Console.WriteLine("8. List of clients");
+                Console.WriteLine("5. Add customer");
+                Console.WriteLine("6. Remove customer");
+                Console.WriteLine("7. Search customer by name");
+                Console.WriteLine("8. List of customers");
                 Console.WriteLine("9. Place order");
                 Console.WriteLine("10. Restore order status");
                 Console.WriteLine("11. Add category");
                 Console.WriteLine("12. Remove category");
-                Console.WriteLine("13. Serch category by name");
+                Console.WriteLine("13. Search category by name");
                 Console.WriteLine("14. List of categories");
                 Console.WriteLine("15. Payment processing");
                 Console.WriteLine("16. Edit store details");
                 Console.WriteLine("17. Generate sails report");
-                Console.WriteLine("18. Generate clientele report");
+                Console.WriteLine("18. Generate customer report");
                 Console.WriteLine("19. Generate store information");
                 Console.WriteLine("20. Exit");
 
-                Console.Write("Chose a command: ");
+                Console.Write("Choose a command: ");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.Blue;
                 string choice = Console.ReadLine();
@@ -157,7 +157,7 @@ namespace Zadanie_8
             string id = Console.ReadLine();
             store.RemoveProduct(id);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("The product has been siccessfully removed.");
+            Console.WriteLine("The product has been successfully removed.");
             Console.ResetColor();
         }
         //3
@@ -190,23 +190,23 @@ namespace Zadanie_8
         public static void AddCustomer(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter client ID:");
+            Console.WriteLine("Enter customer ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter client name:");
+            Console.WriteLine("Enter customer name:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string name = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter client e-mail:");
+            Console.WriteLine("Enter customer e-mail:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string email = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter client telephone number:");
+            Console.WriteLine("Enter customer phone number:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string phone = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter the client's delivery sddress:");
+            Console.WriteLine("Enter the customer's delivery address:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string address = Console.ReadLine();
 
@@ -221,26 +221,26 @@ namespace Zadanie_8
 
             store.AddCustomer(customer);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("The client has been successfully added.");
+            Console.WriteLine("The customer has been successfully added.");
             Console.ResetColor();
         }
         //6
         public static void RemoveCustomer(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter client ID to remove:");
+            Console.WriteLine("Enter customer ID to remove:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             store.RemoveCustomer(id);
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("The client has been successfully removed.");
+            Console.WriteLine("The customer has been successfully removed.");
             Console.ResetColor();
         }
         //7
         public static void SearchCustomerByName(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter name to search client:");
+            Console.WriteLine("Enter name to search customer:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string name = Console.ReadLine();
             var customers = store.SearchCustomerByName(name);
@@ -270,7 +270,7 @@ namespace Zadanie_8
             Console.ForegroundColor = ConsoleColor.Blue;
             string orderId = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter client ID:");
+            Console.WriteLine("Enter customer ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string customerId = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
@@ -363,7 +363,7 @@ namespace Zadanie_8
         public static void RemoveCategory(OnlineStore store)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter ID of the catedory to remove:");
+            Console.WriteLine("Enter ID of the category to remove:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string id = Console.ReadLine();
             store.RemoveCategory(id);
@@ -472,7 +472,7 @@ namespace Zadanie_8
             store.GenerateCustomerReport();
             Console.ResetColor();
         }
-        //19 
+        //19 new
         public static void GenerateStoreInformation(OnlineStore info)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
