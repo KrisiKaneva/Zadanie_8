@@ -323,7 +323,7 @@ namespace Zadanie_8
             Console.WriteLine("Enter order ID:");
             Console.ForegroundColor = ConsoleColor.Blue;
             string orderId = Console.ReadLine();
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Enter new order status (in waiting, processed, sent, delivered):");
             string status = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -416,7 +416,7 @@ namespace Zadanie_8
             Console.ForegroundColor = ConsoleColor.Blue;
             decimal amount = decimal.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter payment method (credit card,debit card, PayPal, bank transfer):");
+            Console.WriteLine("Enter payment method (Credit card, Debit card, PayPal, Bank transfer):");
             Console.ForegroundColor = ConsoleColor.Blue;
             string paymentMethod = Console.ReadLine();
 
