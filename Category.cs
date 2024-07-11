@@ -8,7 +8,7 @@ namespace Zadanie_8
 {
     internal class Category
     {
-        private string categoryID; //change
+        private string categoryID;
         public string CategoryID
         {
             get { return categoryID; }
@@ -62,7 +62,7 @@ namespace Zadanie_8
             }
         }
 
-        public List<Product> Products { get; set; } //change
+        public List<Product> Products { get; set; } 
     }
 }
 
