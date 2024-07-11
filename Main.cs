@@ -408,7 +408,7 @@ namespace Zadanie_8
             Console.ForegroundColor = ConsoleColor.Blue;
             string orderId = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter date of payment  (YYYY-MM-DD):");
+            Console.WriteLine("Enter date of payment (YYYY-MM-DD):");
             Console.ForegroundColor = ConsoleColor.Blue;
             DateTime paymentDate = DateTime.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
