@@ -83,14 +83,14 @@ namespace Zadanie_8
             get { return paymentMethod; }
             set
             {
-                if (value != "Credit card" || value != "Debit card" || value != "PayPal" || value != "Bank transfer")
+                if (value == "Credit card" || value == "Debit card" || value == "PayPal" || value == "Bank transfer")
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    throw new ArgumentException("Invalid payment method. Valid options are: Credit card, Debit card, PayPal, Bank transfer.", nameof(value));
+                    paymentMethod = value;
                 }
                 else
                 {
-                    paymentMethod = value;
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    throw new ArgumentException("Invalid payment method. Valid options are: Credit card, Debit card, PayPal, Bank transfer.", nameof(value));
                 }
             }
         }
