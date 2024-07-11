@@ -472,7 +472,7 @@ namespace Zadanie_8
             store.GenerateCustomerReport();
             Console.ResetColor();
         }
-        //19 new
+        //19 
         public static void GenerateStoreInformation(OnlineStore info)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
