@@ -47,3 +47,10 @@
 ## Директна връзка към вашия изходен код
 [Source Code](Main.cs)
 ## Екранни снимки на нашия проект в различни сценарии на неговото използване
+<img width="570" alt="Screenshot 2024-07-11 at 8 57 33" src="https://github.com/KrisiKaneva/Zadanie_8/assets/174993594/688d9bae-1653-44c6-a778-d7be675bc9d9">
+<img width="570" alt="Screenshot 2024-07-11 at 8 53 52" src="https://github.com/KrisiKaneva/Zadanie_8/assets/174993594/337fd59f-deb2-47db-b97d-bfac2333c0ac">
+<img width="570" alt="Screenshot 2024-07-11 at 9 00 50" src="https://github.com/KrisiKaneva/Zadanie_8/assets/174993594/420ec386-1009-4ed4-98d0-56145268e5a9">
+<img width="570" alt="Screenshot 2024-07-11 at 9 01 13" src="https://github.com/KrisiKaneva/Zadanie_8/assets/174993594/195d47b5-d2c8-418b-99b6-77d00ba25ece">
+<img width="570" alt="Screenshot 2024-07-11 at 9 02 35" src="https://github.com/KrisiKaneva/Zadanie_8/assets/174993594/f3a20f8e-cedf-44aa-91ba-a200aeb22b3b">
+<img width="570" alt="Screenshot 2024-07-11 at 9 03 48" src="https://github.com/KrisiKaneva/Zadanie_8/assets/174993594/bed5669c-764f-4b2c-9365-0f886c89d826">
+<img width="570" alt="Screenshot 2024-07-11 at 9 08 00" src="https://github.com/KrisiKaneva/Zadanie_8/assets/174993594/95aa3051-0124-49ba-b76b-dd2b57639384">
